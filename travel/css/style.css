@@ -1,0 +1,256 @@
+/* start global style */
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Aleo', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+p, div, h1, h2, h3, h4, h5, h6, blockquote, ul, ol, li {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+h2 {
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 53px;
+    color: #F2785C;
+}
+
+input {
+    border: none;
+}
+
+.container {
+    max-width: 1220px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.flex-cr {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    background-color: #0D606F;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    color: inherit;
+    font-family: 'Red Hat Text', sans-serif;
+    transition: background-color 0.5s;
+}
+
+.btn:hover {
+    background-color: #09444f;
+}
+
+.wrap-more {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.link-more {
+    padding: 13px 38px 13px 81px;
+    position: relative;
+    display: inline-block;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #fff;
+}
+
+.link-more::after {
+    content: "";
+    position: absolute;
+    left: 33px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 38px;
+    height: 22px;
+    background-image: url(../img/arrow-right.svg);
+    background-repeat: no-repeat;
+}
+
+/* end global style */
+
+
+/* start block header*/
+.privew-box {
+    margin-bottom: 85px;
+    background-image: url(../img/preview-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: border-box;
+    max-height: 765px;
+    position: relative;
+    min-height: 390px;
+    height: 100%;
+}
+
+.privew-box::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: black;
+    z-index: -1;
+}
+
+.header {
+    margin-bottom: 32px;
+    padding: 26px 0 24px;
+    background: rgba(242, 120, 92, 0.7);
+    box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
+    font-family: 'Red Hat Text', sans-serif;
+    color: #fff;
+}
+
+.header__inner {
+    justify-content: space-between;
+}
+
+.header__menu {
+    margin: 0px 10px;
+}
+
+.menu__items {
+    justify-content: space-between;
+}
+
+.menu__item:not(:first-child) {
+    margin-left: 42px;
+}
+
+.menu__link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    transition: color 0.5s;
+}
+
+.menu__link:hover {
+    color: #313131;
+}
+
+.header__btn {
+    padding: 10px 30px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
+}
+
+/* end block header*/
+
+/* start block preview */
+.preview {
+    color: #fff;
+    padding-bottom: 17%;
+}
+
+.preview__content {
+    max-width: 892px;
+    width: 100%;
+
+}
+
+.preview__title {
+    margin-bottom: 35px;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 96px;
+}
+
+.preview__text {
+    margin-bottom: 46px;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.preview__form {
+    position: relative;
+}
+
+.preview__search {
+    display: block;
+    width: 100%;
+    padding: 32px 298px 34px 41px;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #F2785C;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 1;
+    border-radius: 16px;
+    transition: background-color 0.5s;
+}
+
+.preview__search:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.preview__search:focus {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.preview__search::placeholder {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #F2785C;
+}
+
+.preview__btn {
+    padding: 13.5px 32.5px;
+    box-shadow: 0px 0px 3px rgb(13 96 111 / 8%), 0px 2px 3px rgb(13 96 111 / 16%);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    max-width: 290px;
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+}
+
+/* end block preview */
