@@ -254,3 +254,43 @@ input {
 }
 
 /* end block preview */
+
+
+
+/* start block steps */
+.steps {
+    margin-bottom: 92px;
+}
+
+.steps__title {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.steps__items {
+    justify-content: space-between;
+}
+
+.steps__img-box {
+    margin: 0 auto 30px;
+    width: 100px;
+    height: 100px;
+    background: #F2785C;
+    border-radius: 16px;
+    position: relative;
+}
+
+.steps__img-box svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.steps__item-text {
+    color: #0D606F;
+    max-width: 320px;
+    text-align: center;
+}
+
+/* end block steps */
