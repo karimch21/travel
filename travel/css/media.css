@@ -1,0 +1,481 @@
+@media (max-width: 1430px) {
+    .destinations__slide {
+        margin-left: 10px;
+        min-height: 210px;
+        min-width: auto;
+        transform: translatex(0px);
+        flex-shrink: 0;
+    }
+
+    .destinations__slides {
+        margin-bottom: 0;
+        margin-left: -10px;
+        width: 100%;
+    }
+
+    .destinations__wrap {
+        position: relative;
+        padding: 0 10px;
+    }
+
+    .destinations__slide-name {
+        bottom: auto;
+        top: 8px;
+    }
+
+    .dotes {
+        position: absolute;
+        bottom: 12px;
+        left: 50%;
+        transform: translatex(-50%);
+    }
+
+    .arrows {
+        display: block;
+    }
+}
+
+@media(max-width: 910px) {
+
+    .wrap-bg {
+        background-position: center 61px;
+    }
+
+    .stories__box {
+        padding-top: 40px;
+    }
+
+    .stories__card-title {
+        margin-bottom: 10px;
+        font-size: 21px;
+        line-height: 26px;
+    }
+
+    .img-box {
+        margin-right: 10px;
+        min-height: 200px;
+    }
+
+    .stories__card-text, .stories__card-link {
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    .menu__item:not(:first-child) {
+        margin-left: 10px;
+    }
+
+    .btn.header__btn {
+        padding: 10px 20px;
+    }
+
+    .preview__btn, .link-more {
+        font-size: 24px;
+        line-height: 25px;
+    }
+
+    .preview__search::placeholder {
+        font-size: 24px;
+        line-height: 25px;
+    }
+
+    .preview__search {
+        font-size: 24px;
+        line-height: 25px;
+    }
+
+    .preview__title {
+        margin-bottom: 15px;
+        font-size: 60px;
+        line-height: 70px;
+    }
+
+    h2 {
+        font-size: 27px;
+        line-height: 30px;
+    }
+
+    .privew-box, .steps, .destinations {
+        margin-bottom: 60px;
+    }
+
+    .steps__item-text {
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    .steps__img-box {
+        margin: 0 auto 19px;
+        width: 80px;
+        height: 80px;
+    }
+
+    .steps__img-box svg {
+        width: 50px;
+        height: 40px;
+    }
+
+}
+
+@media(max-width: 800px) {
+    .header__btn {
+        display: none;
+    }
+
+    .steps__item-text {
+        max-width: 130px;
+    }
+
+    .steps__item:first-child .steps__item-text {
+        text-align: left;
+    }
+
+    .steps__item:last-child .steps__item-text {
+        text-align: right;
+    }
+}
+
+@media (max-width: 650px) {
+    .destinations__slide-name {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .dot:not(:first-child) {
+        margin-left: 6px;
+    }
+
+    .footer__inner {
+        justify-content: center;
+    }
+
+    .footer__text {
+        display: none;
+    }
+
+    .stories__card-title {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .stories__card-text, .stories__card-link {
+        font-size: 12px;
+        line-height: 13px;
+    }
+
+    .preview__title {
+        font-size: 42px;
+        line-height: 50px;
+    }
+
+    .preview__text {
+        margin-bottom: 30px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .preview__btn, .link-more {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .preview__btn {
+        padding-left: 9px;
+        padding-right: 9px;
+    }
+
+    .preview__search {
+        padding: 20px 160px 20px 17px;
+    }
+
+    .preview__search::placeholder {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .preview__search {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+}
+
+@media (max-width: 520px) {
+    .stories {
+        padding-bottom: 24px;
+    }
+
+    .link-more {
+        padding: 13px 15px 13px 40px;
+    }
+
+    .link-more::after {
+        left: 12px;
+        width: 20px;
+        height: 13px;
+        background-size: contain;
+    }
+
+    .wrap-more {
+        margin-top: 25px;
+    }
+
+    .menu__link {
+        font-size: 14px;
+    }
+
+    .preview__btn {
+        right: 9px;
+    }
+}
+
+@media (max-width: 460px) {
+    .img-box {
+        min-height: 130px;
+    }
+
+    .stories__card-title {
+        font-size: 11px;
+        line-height: 13px;
+        font-weight: 700;
+    }
+
+    .stories__card-text, .stories__card-link {
+        font-size: 9px;
+        line-height: 11px;
+    }
+
+    .menu__items {
+        justify-content: flex-end;
+        flex-wrap: wrap;
+    }
+
+    .preview__search::placeholder {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .preview__search {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .steps__img-box {
+        margin: 0 0 19px 0;
+        width: 70px;
+        height: 70px;
+    }
+
+    .steps__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .steps__item:first-child .steps__img-box {
+        align-self: flex-start;
+    }
+
+    .steps__item:last-child .steps__img-box {
+        align-self: flex-end;
+    }
+
+    .steps__img-box svg {
+        width: 40px;
+        height: 35px;
+    }
+
+    .steps__item-text {
+        max-width: 111px;
+        font-size: 12px;
+        line-height: 12px;
+    }
+
+    .steps__item:not(:nth-of-type(2)) {
+        max-width: 98px;
+    }
+
+
+}
+
+@media (max-width: 390px) {
+    
+    .stories {
+        padding-bottom: 13px;
+    }
+
+    .link-more::after {
+        width: 10px;
+        height: 6px;
+    }
+
+    .link-more {
+        padding: 13px 15px 13px 29px;
+    }
+
+    .wrap-more {
+        margin-top: 10px;
+    }
+
+    .stories__card-text {
+        max-width: 195px;
+    }
+
+    .wrap-bg {
+        background-position: center 31px;
+    }
+
+    .stories__box {
+        padding-top: 20px;
+    }
+
+    .stories__card:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    .stories__card-text--small {
+        display: block;
+    }
+
+    .stories__card-text--main {
+        display: none;
+    }
+
+    .img-box {
+        max-width: 155px;
+    }
+
+    .stories__card-text--hide {
+        display: none;
+    }
+
+    .privew-box, .steps, .destinations {
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .steps__title, .destinations__title {
+        margin-bottom: 20px;
+    }
+
+    .steps__item-text {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .burger-open {
+        display: block;
+    }
+
+    .burger-close {
+        display: block;
+    }
+
+    .burger-close svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .header__btn {
+        display: none;
+    }
+
+    .menu {
+        margin: 0;
+        position: absolute;
+        right: -1000px;
+        transition: all 0.5s;
+        top: 0;
+        z-index: 1000;
+        max-width: 165px;
+        width: 100%;
+        background-color: #F2785C;
+        padding: 15px 15px 30px 10px;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: all 0.5s;
+    }
+
+    .menu--active {
+        right: 0;
+    }
+
+    .menu a {
+        display: block;
+        font-size: 16px;
+        line-height: 21px;
+        text-align: right;
+    }
+
+    .menu .menu__items {
+        display: block;
+    }
+
+    .menu__item:not(:last-child) {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .menu__item--hide {
+        display: block;
+    }
+
+    .header {
+        margin-bottom: 67px;
+        padding: 45px 0 0px;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .preview {
+        padding-bottom: 0;
+    }
+
+    .privew-box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-height: 250px;
+        height: 100%;
+        background: linear-gradient(180deg, #0D606F 0%, rgba(13, 96, 111, 0) 25.1%);
+    }
+
+    .preview__title, .preview__text {
+        display: none;
+    }
+
+    .preview__search {
+        padding: 16px 120px 17px 17px;
+    }
+
+    .btn {
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+    .preview__btn, .destinations__btn, .stories__btn {
+        padding-top: 7.5px;
+        padding-bottom: 7.5px;
+    }
+
+    .preview__btn {
+        font-size: 11px;
+        line-height: 15px;
+    }
+    .destinations__btn {
+        padding-right: 12px;
+        padding-left: 28px;
+    }
+}

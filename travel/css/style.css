@@ -22,6 +22,7 @@ body {
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
+    position: relative;
 }
 
 a {
@@ -51,6 +52,10 @@ input {
     border: none;
 }
 
+body img {
+    max-width: 100%;
+}
+
 .container {
     max-width: 1220px;
     padding: 0 10px;
@@ -62,12 +67,16 @@ input {
     align-items: center;
 }
 
-.btn {
-    background-color: #0D606F;
-    border-radius: 10px;
+button {
     cursor: pointer;
     border: none;
     color: inherit;
+    background-color: transparent;
+}
+
+.btn {
+    background-color: #0D606F;
+    border-radius: 10px;
     font-family: 'Red Hat Text', sans-serif;
     transition: background-color 0.5s;
 }
@@ -79,6 +88,102 @@ input {
 .wrap-more {
     margin-top: 40px;
     text-align: center;
+}
+/* end global style */
+
+
+/* start block header*/
+.privew-box {
+    margin-bottom: 85px;
+    background-image: url(../img/preview-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: border-box;
+    max-height: 765px;
+    position: relative;
+    min-height: 251px;
+    height: 100%;
+}
+
+.privew-box::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: black;
+    z-index: -1;
+}
+
+.header {
+    margin-bottom: 32px;
+    padding: 26px 0 24px;
+    background: rgba(242, 120, 92, 0.7);
+    box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
+    font-family: 'Red Hat Text', sans-serif;
+    color: #fff;
+}
+
+.header__logo {
+    min-width: 30px;
+    height: auto;
+}
+
+.header__inner {
+    justify-content: space-between;
+}
+.header__btn {
+    padding: 10px 30px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
+}
+
+.menu {
+    margin: 0px 10px;
+}
+
+.menu__items {
+    justify-content: space-between;
+}
+
+.menu__item:not(:first-child) {
+    margin-left: 42px;
+}
+
+.menu__link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    transition: color 0.5s;
+}
+
+.menu__link:hover {
+    color: #313131;
+}
+
+.burger {
+    position: relative;
+    width: 26px;
+    height: 16px;
+}
+
+.menu--active .menu__items {
+    display: block;
+}
+  
+.menu__item--hide {
+    display: none;
+}
+.burger-open {
+    display: none;
+}
+
+.burger-close {
+    display: none;
 }
 
 .link-more {
@@ -104,77 +209,7 @@ input {
     background-repeat: no-repeat;
 }
 
-/* end global style */
 
-
-/* start block header*/
-.privew-box {
-    margin-bottom: 85px;
-    background-image: url(../img/preview-bg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-origin: border-box;
-    max-height: 765px;
-    position: relative;
-    min-height: 390px;
-    height: 100%;
-}
-
-.privew-box::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-color: black;
-    z-index: -1;
-}
-
-.header {
-    margin-bottom: 32px;
-    padding: 26px 0 24px;
-    background: rgba(242, 120, 92, 0.7);
-    box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
-    font-family: 'Red Hat Text', sans-serif;
-    color: #fff;
-}
-
-.header__inner {
-    justify-content: space-between;
-}
-
-.header__menu {
-    margin: 0px 10px;
-}
-
-.menu__items {
-    justify-content: space-between;
-}
-
-.menu__item:not(:first-child) {
-    margin-left: 42px;
-}
-
-.menu__link {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 21px;
-    transition: color 0.5s;
-}
-
-.menu__link:hover {
-    color: #313131;
-}
-
-.header__btn {
-    padding: 10px 30px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 21px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
-}
 
 /* end block header*/
 
@@ -269,6 +304,7 @@ input {
 
 .steps__items {
     justify-content: space-between;
+    align-items: flex-start;
 }
 
 .steps__img-box {
@@ -300,9 +336,8 @@ input {
 .destinations {
     margin-bottom: 80px;
 }
-
-.destinations__wrap {
-    margin-bottom: 40px;
+.destinations__wrap{
+    position: relative;
 }
 
 .destinations__title {
@@ -322,7 +357,6 @@ input {
     margin-left: 60px;
     position: relative;
     min-height: 210px;
-    /* min-width: 360px; */
     min-width: 800px;
     max-height: 800px;
     width: 100%;
@@ -381,6 +415,27 @@ input {
     background: #F2785C;
 }
 
+.arrows{
+    display: none;
+}
+.arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.arrow:hover path{
+   fill: #fd5d39;
+}
+.arrow--noScroll path{
+    fill-opacity: 0.5;
+}
+.arrows__left {
+    left: 21px;
+}
+.arrows__right {
+    right: 21px;
+}
 /* end block destinations */
 
 
@@ -412,13 +467,11 @@ input {
 }
 
 .stories__title {
-    padding-bottom: 40px;
     text-align: center;
-    background-color: #fff;
 }
 
 .stories__box {
-    padding-top: 40px;
+    padding-top: 80px;
 }
 
 .stories__card {
@@ -467,31 +520,39 @@ input {
     font-size: 35px;
     line-height: 42px;
 }
+.stories__card-text--small{
+    display: none;
+}
+.stories__card-text--main{
+    display: block;
+}
 
-.stories__card-link {
+.stories__card-link{
+    display: block;
+}
+.stories__card-link span{
     font-weight: 700;
-    /* text-decoration: underline; */
     position: relative;
     overflow-x: hidden;
     transition: color 0.5s;
 }
 
-.stories__card-link::after {
+.stories__card-link span::after {
     content: "";
     width: 100%;
     height: 2px;
     background-color: #0D606F;
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 0px;
     transition: all 0.3s;
 }
 
-.stories__card-link:hover {
+.stories__card-link span:hover {
     color: #05363f;
 }
 
-.stories__card-link:hover::after {
+.stories__card-link span:hover::after {
     bottom: -2px;
     background-color: #05363f;
 }
@@ -505,13 +566,9 @@ input {
 }
 
 .footer__inner {
-    justify-content: center;
+    justify-content: space-between;
     color: #fff;
     width: 100%;
-}
-
-.footer__social {
-    margin-left: auto;
 }
 
 .social__item {
@@ -545,7 +602,8 @@ svg path {
 }
 
 .footer__text {
-    width: 100%;
+    padding-right: 20px;
+    width: 62%;
     text-align: right;
     font-family: 'Red Hat Text';
     font-style: normal;
@@ -554,9 +612,7 @@ svg path {
     line-height: 21px;
 }
 
-.footer__social {
-    margin-left: 22%;
-}
+
 
 .social__item:not(:first-child) {
     margin-left: 24px;
