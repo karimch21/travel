@@ -24,7 +24,18 @@ body {
     line-height: 24px;
     position: relative;
 }
-
+.body--active{
+    overflow: hidden;
+}
+.body--active::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 26, 26, 0.534);
+}
 a {
     color: inherit;
     text-decoration: none;
@@ -89,6 +100,184 @@ button {
     margin-top: 40px;
     text-align: center;
 }
+.popup-wrap{
+    padding: 0 50px;
+    position: fixed;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    -max-width: 750px;
+    overflow: scroll;
+    display: none;
+    flex-direction: column;
+    background-color: rgba(26, 26, 26, 0.534);
+}
+
+.popup-login--active{
+    display: flex;
+}
+.popup-creating--active{
+    display: flex
+}
+.popup{
+    margin: 30px auto;
+    max-width: 650px;
+    width: 100%;
+    padding: 25px 45px 23px;
+    background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+}
+
+.popup__title {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: #0D606F;
+    text-align: center;
+}
+
+.popup__bts {
+    margin-bottom: 30px;
+}
+
+.popup__btn {
+    padding: 15px 10px;
+    display: flex;
+    width: 100%;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    font-family: 'Red Hat Text';
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+
+}
+
+.popup__btn svg {
+    margin-right: 15px;
+}
+
+.popup__btn-facebook {
+    margin-bottom: 20px;
+    background: #1877F2;
+}
+
+.popup__btn-google {
+    color: #0D606F;
+    background-color: #fff;
+}
+
+.popup__line {
+    padding: 0 48%;
+    margin-bottom: 10px;
+    position: relative;
+    font-weight: 700;
+    color: rgba(13, 96, 111, 0.5);
+    text-align: center;
+}
+
+.popup__line::before,
+.popup__line::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1px;
+    width: calc(50% - 20px);
+    background-color: #0D606F80;
+}
+
+.popup__line::before {
+    left: 0;
+}
+
+.popup__line::after {
+    right: 0;
+}
+
+
+.popup__form label {
+    display: block;
+    margin-bottom: 20px;
+}
+
+label:last-of-type {
+    margin-bottom: 25px;
+}
+
+.popup__form input {
+    padding: 15.5px 10px;
+    display: block;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: inset 0px 0px 3px rgba(13, 96, 111, 0.08), inset 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+}
+
+.popup__email {
+    display: block;
+}
+
+.popup__form-title {
+    margin-bottom: 5px;
+    font-size: 16px;
+    line-height: 19px;
+    color: #0D606F;
+}
+
+.popup__btn-submit {
+    padding: 14px 10px 14px;
+    margin-bottom: 14px;
+    display: block;
+    width: 100%;
+    background: #0D606F;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    font-family: 'Red Hat Text';
+    color: #fff;
+}
+
+.popup__recovery {
+    display: block;
+    padding-bottom: 26px;
+    text-align: center;
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+    color: #0D606F;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    text-decoration: underline;
+}
+
+.popup__account {
+    padding-top: 21px;
+    border-top: 1px solid rgba(13, 96, 111, 0.5);
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    color: rgba(13, 96, 111, 0.5);
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+    text-align: center;
+}
+.popup__account a{
+    color: #0D606F;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    text-decoration: underline;
+}
 /* end global style */
 
 
@@ -134,6 +323,7 @@ button {
 .header__inner {
     justify-content: space-between;
 }
+
 .header__btn {
     padding: 10px 30px;
     font-weight: 500;
@@ -174,10 +364,11 @@ button {
 .menu--active .menu__items {
     display: block;
 }
-  
+
 .menu__item--hide {
     display: none;
 }
+
 .burger-open {
     display: none;
 }
@@ -336,7 +527,8 @@ button {
 .destinations {
     margin-bottom: 80px;
 }
-.destinations__wrap{
+
+.destinations__wrap {
     position: relative;
 }
 
@@ -415,27 +607,33 @@ button {
     background: #F2785C;
 }
 
-.arrows{
+.arrows {
     display: none;
 }
-.arrow{
+
+.arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
 }
-.arrow:hover path{
-   fill: #fd5d39;
+
+.arrow:hover path {
+    fill: #fd5d39;
 }
-.arrow--noScroll path{
+
+.arrow--noScroll path {
     fill-opacity: 0.5;
 }
+
 .arrows__left {
     left: 21px;
 }
+
 .arrows__right {
     right: 21px;
 }
+
 /* end block destinations */
 
 
@@ -520,17 +718,20 @@ button {
     font-size: 35px;
     line-height: 42px;
 }
-.stories__card-text--small{
+
+.stories__card-text--small {
     display: none;
 }
-.stories__card-text--main{
+
+.stories__card-text--main {
     display: block;
 }
 
-.stories__card-link{
+.stories__card-link {
     display: block;
 }
-.stories__card-link span{
+
+.stories__card-link span {
     font-weight: 700;
     position: relative;
     overflow-x: hidden;
