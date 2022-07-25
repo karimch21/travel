@@ -3,6 +3,8 @@ console.log('task#1\n Travel-part-1. Вёрстка валидная +10\n -ис
 console.log('task#2\n Вёрстка соответствует макету. Ширина экрана 390px +40\n блок <header> +3\n секция preview +7\n секция steps +9\n секция destinations +9\n секция stories +9\n блок <footer> +3\n Ни на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки. Весь контент страницы при этом сохраняется: не обрезается и не удаляется +15\n нет полосы прокрутки при ширине страницы от 1440рх до 390px +7\n нет полосы прокрутки при ширине страницы от 390px до 320рх +8\n На ширине экрана 390рх и меньше реализовано адаптивное меню +22\n при ширине страницы 390рх панель навигации скрывается, появляется бургер-иконка +2\n при нажатии на бургер-иконку плавно появляется адаптивное меню +4\n адаптивное меню соответствует макету +4\n при нажатии на крестик адаптивное меню плавно скрывается уезжая за экран +4\n ссылки в адаптивном меню работают, обеспечивая плавную прокрутку по якорям +4 (все кроме AcdestinationsSldierCount, она пока что просто закрывает меню)\n при клике по ссылке в адаптивном меню адаптивное меню плавно скрывается, также скрытие меню происходит если сделать клик вне данного окна +4\n Итоговый балл 77');
 console.clear();
 
+console.log('Task #3\n На десктоп варианте при клике на урезанную картинку слева или справа изображение меняется по принципу карусели (например если нажать правую картинку та что была в центре на уезжает налево, а та что была видна наполовину оказывается справа). Слайдер может быть как конечным так и бесконечным - данный критерий не должен влиять на оценку + 20\n Три точки внизу отображают "номер слайда", то есть каждому слайду соответствует свой кружочек, который становится активным при нахождении соответствующего ему слайда в центре. На мобильном варианте картинка одна, но поверх нее появляются стрелочки навигации (можно сделать как карусель или же затемнять кнопку если слайдер достиг края) +20 \n Анимации плавного перемещения для слайдера +10 \n 2. Логин попап соответствует верстке его закрытие происходит при клике вне попапа +25 \n Логин попап имеет 2 инпута (email и пароль) при нажатии на кнопку Sign In показывается браузерный алерт с введенными данными (для реализации можно использовать тег ) +25 \n 3. Нажатие на кнопку Register на Login попапе меняет разметку попапа на разметку Sign Up попапа согласно макету (То есть нажатие не закрывает модал а просто меняет его наполнение). +25 \n Итого: 125')
+
 const burgerOpen = document.querySelector('.burger');
 const burgerClose = document.querySelector('.burger-close')
 const mainMenu = document.querySelector('.menu');
@@ -190,6 +192,7 @@ function gettingElementsFromPopUp() {
     let btnSubmit = document.querySelector('.popup__btn-submit');
     let popupRecovery = document.querySelector('.popup__recovery');
     let popUpForm = document.querySelector('.popup__form form');
+    let popupAccount = document.querySelector('.popup__account span');
 
     let obj = {
         popUpTitle: popUpTitle,
@@ -197,7 +200,8 @@ function gettingElementsFromPopUp() {
         decorLinePopUp: decorLinePopUp,
         btnSubmit: btnSubmit,
         popupRecovery: popupRecovery,
-        popUpForm: popUpForm
+        popUpForm: popUpForm,
+        popupAccount: popupAccount
     }
     return obj
 }
@@ -226,6 +230,7 @@ function switchRegistrationPopUp(popUpLogIn) {
     elementsFromPopUp.popUpTitle.textContent = 'Create account';
     elementsFromPopUp.btnSubmit.textContent = 'Sign Up';
     btnForRegistarion.textContent = 'Log in';
+    elementsFromPopUp.popupAccount.textContent = 'Already have an account?';
     btnForRegistarion.className = 'popup__link-log';
     elementsFromPopUp.popUpForm.name = 'popup__registration';
     elementsFromPopUp.popUpSignBtns.style.display = 'none';
@@ -244,6 +249,7 @@ function switchLogInPopUp(popUpLogIn) {
     elementsFromPopUp.popUpTitle.textContent = 'Log in to your account';
     elementsFromPopUp.btnSubmit.textContent = 'Sign In';
     btnForRegistarion.textContent = 'Register';
+    elementsFromPopUp.popupAccount.textContent = 'Don’t have an account?'
     btnForRegistarion.className = 'popup__link-register';
     elementsFromPopUp.popUpForm.name = 'popup-login';
     elementsFromPopUp.popUpSignBtns.style.display = 'block';
