@@ -3,7 +3,6 @@
         margin-left: 10px;
         min-height: 210px;
         min-width: auto;
-        transform: translatex(0px);
         flex-shrink: 0;
     }
 
@@ -11,6 +10,7 @@
         margin-bottom: 0;
         margin-left: -10px;
         width: 100%;
+        transform: translatex(0);
     }
 
     .destinations__wrap {
