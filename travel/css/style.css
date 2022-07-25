@@ -542,6 +542,8 @@ label:last-of-type {
     margin-bottom: 24px;
     display: flex;
     align-items: center;
+    transform: translatex(-540px);
+    transition: transform 0.5s;
 }
 
 .destinations__slide {
@@ -555,7 +557,6 @@ label:last-of-type {
     height: 100%;
     border-radius: 16px;
     overflow: hidden;
-    transform: translatex(-540px);
 }
 
 .destinations__slide-name {
@@ -591,13 +592,9 @@ label:last-of-type {
     border-radius: 100%;
     background: rgba(242, 120, 92, 0.5);
     border: none;
-    cursor: pointer;
     transition: background-color 0.5s;
 }
 
-.dot:not(.dot--active):hover {
-    background: rgba(242, 120, 92, 0.8);
-}
 
 .dot:not(:first-child) {
     margin-left: 10px;
